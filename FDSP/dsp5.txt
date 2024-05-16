@@ -1,0 +1,22 @@
+%linearity and circular convolution:
+
+
+%linear convolution:
+
+x1 = [1 2 3 4]
+X1 = fft (X1,4)
+x2 = [4 5 8 9]
+X2 = fft (X2,4)
+x3 = x1+x2
+X3 = fft (X3,4)
+p=X1+X2
+
+%circular convolution:
+
+x1 = [ 4 5 9 2]
+X1 = fft (X1,4)
+x2 = [2 4 6 8]
+X2 = fft (X2,4)
+x3 = cconv (a1,b2,4)
+X3 = fft (X3,4)
+p=X1.*X2

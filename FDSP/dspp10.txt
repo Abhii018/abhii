@@ -1,0 +1,19 @@
+M=input("enter the interpollation and decimation factor");
+N=50;
+n=0:N-1;
+x=sin(2*pi*0.04*n);
+subplot(3,1,1);2
+stem(n,x(1:N));
+
+%decimated signal
+
+m=0:(N/M)-1;
+y=decimate(x,M);
+subplot(3,1,2);
+stem(m,y(1:(N/M)));
+
+%interpollated sidnal
+m=0:(N*M)-1;
+y=decimate(x,M);
+subplot(3,1,3);
+stem(m,y(1:(N*M)));

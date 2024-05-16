@@ -1,0 +1,15 @@
+%4 point circular convolution:
+
+x=[4 1 2 3];
+h=[1 2 1 2];
+y=cconv(x,h,4);
+disp('answer of circular convolution is:');
+disp(y);
+
+%linear convolution using circular convolution:
+
+p=[4 1 2 3 0 0 0]
+q=[1 2 1 2 0 0 0]
+z=cconv(p,q,7)
+disp('linear convolution using circular convolution');
+disp(z)

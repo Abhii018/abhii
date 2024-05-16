@@ -1,0 +1,19 @@
+%FIR filter:
+
+N=50;
+h=fir1(N,0.5);
+t=0:0.01:5;
+x=sin(2*pi*5*t)+randn(size(t));
+y=filter(h,1,x);
+
+subplot(2,1,1);
+plot(t,x);
+title('original signal');
+xlabel('time');
+ylabel('amplitude');
+
+subplot(2,1,2);
+plot(t,y);
+title('filtered signal');
+xlabel('time');
+ylabel('amplitude');

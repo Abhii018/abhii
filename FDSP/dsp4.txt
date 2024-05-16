@@ -1,0 +1,14 @@
+clc;
+syms x n p z;
+x=input("enter the signal");
+n=ztrans(x);
+disp('z transform of input signal');
+disp(x);
+p=iztrans(n);
+disp(p);
+nr=[-4 8 0];
+dr=[1 6 8];
+zplane(nr,dr);
+title('pole zero plot');
+xlabel('real part');
+ylabel('imagainary part');
