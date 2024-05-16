@@ -1,0 +1,18 @@
+% Define your sequence
+x = [1, 2, 3, 4];
+
+% Perform FFT
+X = fft(x);
+
+% Perform IFFT
+x_restored = ifft(X);
+
+% Display the results
+disp('Original sequence:');
+disp(x);
+
+disp('FFT result:');
+disp(X);
+
+disp('Restored sequence (after IFFT):');
+disp(x_restored);
