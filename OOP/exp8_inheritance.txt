@@ -1,48 +1,30 @@
-EXP08
-Write a Program in java on single and multilevel inheritance
--------Main class-----------------------------------------------------------------------------------
-package samplecode;
-
-public class Exp08 {
-
-	public static void main(String[] args) {
-		parent obj1=new child();
-		child obj2=new child();
-		gchild obj3=new gchild();
-		
-		obj1.display();
-		obj2.display();
-		obj3.display();
-		
-
-	}
-
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
 }
-----------------parent class-----------------------------------------------------------------------
-package samplecode;
 
-public class parent {
-	int a=10;
-	int b=20;
-	void display() {
-		System.out.println("Cycle...");
-	}
+// Child class inheriting from Animal
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
 }
--------------------child class-----------------------------------------------------------------
-package samplecode;
 
-public class child extends parent {
-	void display() {
-		System.out.println("Bike...");
-	}
-
+// Grandchild class inheriting from Dog
+class Labrador extends Dog {
+    void color() {
+        System.out.println("Labrador is black in color...");
+    }
 }
-----------------------gchild class--------------------------------------------------------
-package samplecode;
 
-public class gchild extends parent{
-	void display() {
-		System.out.println("Car....");
-	}
-
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Labrador myLab = new Labrador(); // Creating an object of Labrador class
+        myLab.eat(); // Accessing eat() method from Animal class
+        myLab.bark(); // Accessing bark() method from Dog class
+        myLab.color(); // Accessing color() method from Labrador class
+    }
 }
