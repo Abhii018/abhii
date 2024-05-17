@@ -1,0 +1,32 @@
+EXP07
+Write a java program for exception handling
+-----------------------------------------------------------------------------------
+package samplecode;
+
+import java.util.Scanner;
+
+public class Exp07 {
+	
+
+	public static void main(String[] args) {
+		int x=10;
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]= {10,20,30,40,50};
+		
+		try {
+			int y=x/n;
+			a[5]=60;
+			
+			
+		}
+		
+		catch(ArithmeticException obj) {
+			System.out.println("Divide by zero....please check "+obj.getMessage());
+		}
+		
+		catch(ArrayIndexOutOfBoundsException obj) {
+			System.out.println("Array Size is full...please check "+obj.getMessage());
+		}
+	}
+}

@@ -1,0 +1,30 @@
+Exp06
+Write a program in Java on constructor and constructor overloading
+----------------------------------------------------------------------------
+package samplecode;
+
+public class Exp06 {
+
+	
+	Exp06(int a){
+		this(20,15);
+		System.out.println("1 parameter constructor..."+a);
+	}
+
+	Exp06(int a, int b){
+		this("SANJIVANI");
+		System.out.println("2 parameter constructor..."+(a-b));
+	}
+	
+	Exp06(String x){
+		System.out.println("1 parameter string type data constructor..."+x);
+	}
+	public static void main(String[] args) {
+		Exp06 o1=new Exp06(50);
+		Exp06 o2=new Exp06(50,10);
+		Exp06 o3=new Exp06("Jaydeep");
+		
+		
+	}
+
+}

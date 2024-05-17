@@ -1,0 +1,29 @@
+Exp10
+Write a program in java to implement interface
+----------------------------------------------------------------------------------------
+package samplecode;
+
+interface Shape
+{
+	double pi=3.14;
+	public void getArea(int a);
+	
+}
+
+class Circle implements Shape
+{
+	public void getArea(int r)
+	{
+		double area=pi*r*r;
+		System.out.println("Area is"+area);
+	}
+}
+
+class Exp10 {
+
+	public static void main(String args[])
+	{
+		Shape c1=new Circle();
+		c1.getArea(3);
+	}
+}

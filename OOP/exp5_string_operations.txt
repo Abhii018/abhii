@@ -1,0 +1,36 @@
+Exp05
+Write a program in Java to implement string operations/passing object and returning object
+----------------------------------------------------------------------------------------
+package samplecode;
+
+public class Exp05 {
+	int a,b;
+	
+	
+	Exp05(int i, int j){
+		a=i;
+		b=j;
+	}
+	
+	public boolean compareTo(Exp05 o) {
+		
+		return(o.a==a&& o.b==b);
+	}
+	public static void main(String[] args) {
+	Exp05 ob1=new Exp05(50,100);
+	Exp05 ob2=new Exp05(50,100);
+	System.out.println(ob1.compareTo(ob2));
+	
+	Exp05 ob3=new Exp05(+10,+10);
+	System.out.println(ob1.compareTo(ob3));
+	
+	Exp05 ob5=ob2.incrementbyTen();
+	System.out.println(ob5.a+ " "+ob5.b);
+	System.out.println(ob1.a+ " "+ob1.b);
+	
+	}
+	private Exp05 incrementbyTen() {
+		Exp05 temp=new Exp05(a+10,b+10);
+		return temp;
+	}
+}

@@ -1,0 +1,28 @@
+Exp04
+Write a Program in Java on method overloading
+------------------------------------------------------------------------------------
+package samplecode;
+
+public class Exp04 {
+	public void display() {
+		System.out.println("MYself Jaydeep Dalvi");
+	}
+	public void display(int a, int b, int c) {
+		System.out.println("Addition of three integer number is "+(a+b+c));
+	}
+	public void display(double a, double b) {
+		System.out.println("Multiplication of two  Double number is "+(a*b));
+	}
+	public static void main(String[] args) {
+		Exp04 obj1=new Exp04();
+		obj1.display();
+		
+		Exp04 obj2=new Exp04();
+		obj2.display(50,50,50);
+		
+		Exp04 obj3=new Exp04();
+		obj3.display(2.5,2.5);
+
+	}
+
+}

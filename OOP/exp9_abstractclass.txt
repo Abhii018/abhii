@@ -1,0 +1,36 @@
+Exp09
+Write a program in Java to implement abstract class
+----------------Main class---------------------------------------------------------------------
+package samplecode;
+
+public class Exp09 {
+
+	public static void main(String[] args) {
+		abc obj=new abc();
+		obj.Car1();
+		obj.Car2();
+
+	}
+
+}
+------------XYZ class------------------------------------------------------------------------
+package samplecode;
+
+public abstract class XYZ  {
+	abstract void Car1();
+		public void Car2() {
+			System.out.println("This is Car2 Volvo...");
+		}
+	}
+
+
+--------------------------------abc class-------------------------------------------------
+package samplecode;
+
+public class abc extends XYZ {
+	
+	public void Car1() {
+		System.out.println("This is Car1 BMW");
+	}
+
+}

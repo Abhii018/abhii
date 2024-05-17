@@ -1,0 +1,48 @@
+EXP08
+Write a Program in java on single and multilevel inheritance
+-------Main class-----------------------------------------------------------------------------------
+package samplecode;
+
+public class Exp08 {
+
+	public static void main(String[] args) {
+		parent obj1=new child();
+		child obj2=new child();
+		gchild obj3=new gchild();
+		
+		obj1.display();
+		obj2.display();
+		obj3.display();
+		
+
+	}
+
+}
+----------------parent class-----------------------------------------------------------------------
+package samplecode;
+
+public class parent {
+	int a=10;
+	int b=20;
+	void display() {
+		System.out.println("Cycle...");
+	}
+}
+-------------------child class-----------------------------------------------------------------
+package samplecode;
+
+public class child extends parent {
+	void display() {
+		System.out.println("Bike...");
+	}
+
+}
+----------------------gchild class--------------------------------------------------------
+package samplecode;
+
+public class gchild extends parent{
+	void display() {
+		System.out.println("Car....");
+	}
+
+}

@@ -1,0 +1,29 @@
+EXP01
+Write a program in java to create a class, methods to display object details.
+-----------------------------------------------------------------------------
+package samplecode;
+
+public class Exp01 {
+	static int x=22;
+	public static void display() {
+		x=44;
+		System.out.println("This is nonstatic method...");
+	}
+
+	public static void main(String[] args) {
+		Exp01 obj1=new Exp01();
+		
+		obj1.display();
+		System.out.println(x);
+		
+		Exp01 obj2=new Exp01();
+		obj2.display();
+		
+		Exp01.display();
+		
+		display();
+		
+
+	}
+
+}

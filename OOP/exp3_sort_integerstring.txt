@@ -1,0 +1,53 @@
+EXP03
+Write a program in Java to sort integers and string.
+------------------------------------------------------------------------------
+Integer Sorting----------------------------------------------------------
+package samplecode;
+
+public class Exp03IntSort {
+
+	public static void main(String[] args) {
+		int a[]= {22,56,2,71,-98,58,0};
+		for(int i=0;i<a.length-1;i++) {
+			for(int j=0;j<a.length-1;j++) {
+				if (a[j]>a[j+1]) {
+					int t=a[j];
+					a[j]=a[j+1];
+					a[j+1]=t;
+				
+				}
+			}
+		}
+		for(int i=0;i<a.length-1;i++) {
+		System.out.println(" "+a[i]);
+		
+	}
+
+}
+}
+-----------------------------------------------------------------------------------
+String sorting------------------------------------------------------------
+package samplecode;
+
+public class Exp03StringSort {
+
+	public static void main(String[] args) {
+		String[] strings= {"Jaydeep","Virendra","Mangesh","Pratik","Rohit"};
+		for(int i=0;i<strings.length-1;i++) {
+			for(int j=i+1;j<strings.length;j++) {
+				if(strings[i].compareTo(strings[j])>0) {
+					String temp=strings[i];
+					strings[i]=strings[j];
+					strings[j]=temp;
+					
+				}
+			}
+		}
+		System.out.println("Sorting String:");
+		for(String t:strings) {
+			System.out.println(t);
+		}
+
+	}
+
+}
